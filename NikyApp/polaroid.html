@@ -1,0 +1,41 @@
+<!-- polaroid.html -->
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Polaroidový Chaos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <a href="index.html">🏠 Domů</a>
+  </nav>
+
+  <h1>📸 Fotečky</h1>
+
+  <div class="polaroid-grid" id="polaroidGrid"></div>
+
+  <script>
+    // Fotky p1.jpg – p5.jpg
+    const photoCount = 5;
+    const container = document.getElementById("polaroidGrid");
+
+    for (let i = 1; i <= photoCount; i++) {
+      const wrap = document.createElement("div");
+      wrap.className = "polaroid";
+
+      // náhodný tilt
+      const tilt = (Math.random() * 20 - 10).toFixed(2);
+      wrap.style.transform = `rotate(${tilt}deg)`;
+
+      const img = document.createElement("img");
+      img.src = `photos/p${i}.jpg`;
+      img.alt = `Polaroid ${i}`;
+
+      wrap.appendChild(img);
+      container.appendChild(wrap);
+    }
+  </script>
+</body>
+</html>

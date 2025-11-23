@@ -1,0 +1,102 @@
+/* ---------- FONT ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ---------- BODY ---------- */
+body {
+    background: linear-gradient(to bottom right, #b7d8ff, #5fa4ff);
+    color: #0a2a43;
+    min-height: 100vh;
+    padding: 30px;
+    text-align: center;
+}
+
+/* ---------- TITLES ---------- */
+h1, h2 {
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #06375c;
+}
+
+/* ---------- MAIN CONTENT WRAPPER ---------- */
+.center {
+    max-width: 400px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.35);
+    padding: 30px;
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ---------- BUTTONS ---------- */
+.btn {
+    display: block;
+    width: 100%;
+    background: #1f71ff;
+    color: white;
+    text-decoration: none;
+    padding: 14px;
+    margin: 10px 0;
+    border-radius: 18px;
+    font-weight: 600;
+    font-size: 17px;
+    transition: 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 50, 150, 0.35);
+}
+
+.btn:hover {
+    background: #1454c2;
+    transform: translateY(-2px);
+}
+
+/* ---------- TEXT BOXES ---------- */
+.text-box {
+    background: white;
+    color: #092c4b;
+    padding: 20px;
+    border-radius: 15px;
+    width: 80%;
+    margin: 0 auto 20px auto;
+    min-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    box-shadow: 0 4px 14px rgba(0, 0, 40, 0.15);
+}
+
+/* ---------- BACK BUTTON ---------- */
+.back {
+    display: inline-block;
+    margin-top: 25px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #093862;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.back:hover {
+    color: #0a4f94;
+}
+
+.photo-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+gap: 15px;
+padding: 20px;
+}
+.photo-grid img {
+width: 100%;
+aspect-ratio: 1/1;
+object-fit: cover;
+border-radius: 12px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
